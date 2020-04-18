@@ -9,7 +9,7 @@ public class Passenger {
     /**
      * Имя пассажира
      */
-    public String name;
+    String name;
     /**
      * Фамили пассажира
      */
@@ -25,24 +25,27 @@ public class Passenger {
 
     /**
      * Конструктор, заполняющий единственно поле.
-     * @param docNumberArg - номер документа, удостоверяющего личность.
      */
-    public Passenger(String docNumberArg) {
-        docNumber = docNumberArg;
+    public Passenger(){
+        System.out.println("constructor 1");
     }
 
-    /**
-     * Конструктор, заполняющий все поля.
-     * @param name - имя пассажира
-     * @param surname - фамилия пассажира
-     * @param secondName - отчество пассажира
-     * @param docNumber - номер документа, удостоверяюего личность
-     */
     public Passenger(String name, String surname, String secondName, String docNumber) {
-        this(docNumber);
         this.name = name;
         this.surname = surname;
         this.secondName = secondName;
+        this.docNumber = docNumber;
+    }
+
+    public Passenger(String docNumberArg) {
+        docNumber = docNumberArg;
+        System.out.println("constructor 2");
+    }
+
+
+
+    public Passenger() {
+
     }
 
     /**
