@@ -22,4 +22,7 @@ public class Plane extends Transport {
         super(travelTime, seatsNumber, cost);
         this.luggage = luggage;
     }
+
+
+
 }
